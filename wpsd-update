@@ -175,7 +175,7 @@ perform_update() {
 	    else
 		echo -e "  ${INFO} No operating system updates required.\n"
 	    fi
-	    exit 0
+	    #exit 0
 	fi
     fi
 
