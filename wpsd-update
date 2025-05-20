@@ -160,7 +160,7 @@ term_banner() {
 perform_update() {
     if [ -t 1 ]; then
     # This is running from a terminal, so it should be safe to update the OS
-	if [ "$1" == "os" ]; then
+	if [ "$1" == "os" || "$1" == "all"] ; then
 	    echo -e "\n${BULL} Checking for any available operating system updates."
 	    echo -e "  Please wait...\n"
 	    apt-get -q=2 update
@@ -175,7 +175,9 @@ perform_update() {
 	    else
 		echo -e "  ${INFO} No operating system updates required.\n"
 	    fi
-	    #exit 0
+	    if [ "$1" == "os" ]; then 
+            exit 0
+        fi
 	fi
     fi
 
