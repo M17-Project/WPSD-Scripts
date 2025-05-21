@@ -177,9 +177,9 @@ perform_update() {
 	    fi
 	    if [ "$1" == "os" ]; then 
 	    echo -e "${BULL} ${COL_LIGHT_BLUE}${INFO} WPSD is ${BOLD}not${COL_NC} updated by using ${COL_LIGHT_BLUE}${BOLD}sudo wpsd-update os${COL_NC}"
-	    echo -e "      To check for and instal WPSD update, run this"
+	    echo -e "      To check for and install WPSD updates, run this"
 	    echo -e "      program again as: '${COL_LIGHT_BLUE}${BOLD}sudo wpsd-update${COL_NC}'"
-	    echo -e "      To check for and instal WPSD and OS update, run this"
+	    echo -e "      To check for and install WPSD and OS updates, run this"
 	    echo -e "      program again as: '${COL_LIGHT_BLUE}${BOLD}sudo wpsd-update all${COL_NC}'\n"
            exit 0
         fi
@@ -354,7 +354,7 @@ perform_update() {
 	    echo -e "${BULL} ${COL_LIGHT_BLUE}${INFO} Operating system is ${BOLD}not${COL_NC} updated by default..."
 	    echo -e "      To check for and install OS updates, run this"
 	    echo -e "      program again as: '${COL_LIGHT_BLUE}${BOLD}sudo wpsd-update os${COL_NC}'"
-	    echo -e "      To check for and instal WPSD and OS update, run this"
+	    echo -e "      To check for and install WPSD and OS updates, run this"
 	    echo -e "      program again as: '${COL_LIGHT_BLUE}${BOLD}sudo wpsd-update all${COL_NC}'\n"
 	fi
     fi
