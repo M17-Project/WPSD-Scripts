@@ -12,6 +12,8 @@ source /usr/local/sbin/.wpsd-common-funcs
 
 wpsd-services fullstop
 
+cd /root
+
 rm -rf /usr/local/sbin
 GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD sbin reset (client-side)" git clone --depth 1 https://wpsd-swd.w0chp.net/WPSD-SWD/WPSD-Scripts.git /usr/local/sbin
 
