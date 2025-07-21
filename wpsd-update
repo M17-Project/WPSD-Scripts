@@ -99,7 +99,7 @@ git_update() {
 
         local target_branch="M17"
         if [[ ${gitFolder} == "/var/www/dashboard" ]]; then
-            target_branch="${dash_branch}"
+            target_branch="M17"
         fi
 
         git stash clear > /dev/null 2>&1
@@ -115,7 +115,7 @@ git_update() {
                 exec "$0" "$@"
                 exit 1
             fi
-            target_branch="master"
+            target_branch="M17"
         elif [[ ${gitFolder} == "/usr/local/bin" ]]; then
             /usr/local/sbin/wpsd-services fullstop > /dev/null 2>&1
             process_log_file > /dev/null 2>&1
