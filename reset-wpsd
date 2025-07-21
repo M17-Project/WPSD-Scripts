@@ -15,10 +15,10 @@ wpsd-services fullstop
 cd /root
 
 rm -rf /usr/local/sbin
-GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD sbin reset (client-side)" git clone --depth 1 https://wpsd-swd.w0chp.net/WPSD-SWD/WPSD-Scripts.git /usr/local/sbin
+GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD sbin reset (client-side)" git clone --depth 1 https://github.com/M17-Project/WPSD-Scripts.git /usr/local/sbin
 
 rm -rf /usr/local/bin
-GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD binary reset (client-side)" git clone --depth 1 https://wpsd-swd.w0chp.net/WPSD-SWD/WPSD-Binaries.git /usr/local/bin
+GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD binary reset (client-side)" git clone --depth 1 https://github.com/M17-Project/WPSD-Binaries.git /usr/local/bin
 
 if [ "$fwState" == "enabled" ]; then
     /usr/local/sbin/wpsd-system-manager -efw
@@ -27,7 +27,7 @@ else
 fi
 
 rm -rf /var/www/dashboard
-GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD webcode reset (client-side)" git clone --depth 1 https://wpsd-swd.w0chp.net/WPSD-SWD/WPSD-WebCode.git /var/www/dashboard
+GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD webcode reset (client-side)" git clone --depth 1 https://github.com/M17-Project/WPSD-WebCode.git /var/www/dashboard
 
 # dvmega cast-specific stuff
 castResult=$(isDVmegaCast)
@@ -35,7 +35,7 @@ if [ "$castResult" == "true" ]; then
     # ensure avrdude conf. is installed for radio/hotspot mgmt.
     if [ ! -f '/etc/avrdude.conf' ] ; then
         declare -a CURL_OPTIONS=('-Ls' '-A' "Slipstream-Task (server-side) AVRdude Bootstrap")
-        curl "${CURL_OPTIONS[@]}" -o /etc/avrdude.conf https://wpsd-swd.w0chp.net/WPSD-SWD/DVMega-Cast/raw/branch/master/etc/avrdude.conf
+        curl "${CURL_OPTIONS[@]}" -o /etc/avrdude.conf https://github.com/M17-Project/DVMega-Cast/raw/branch/master/etc/avrdude.conf
     fi
     # remove legacy stuff
     if [ -f '/usr/local/cast/etc/preset.txt' ] ; then
@@ -43,7 +43,7 @@ if [ "$castResult" == "true" ]; then
     fi
 
     rm -rf /opt/cast
-    GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="DVMega Cast SW Reset" git clone --depth 1 https://wpsd-swd.w0chp.net/WPSD-SWD/DVMega-Cast.git /opt/cast
+    GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="DVMega Cast SW Reset" git clone --depth 1 https://github.com/M17-Project/DVMega-Cast.git /opt/cast
 
     rm -rf /usr/local/cast > /dev/null 2>&1
     mkdir -p /usr/local/cast/etc > /dev/null 2>&1
