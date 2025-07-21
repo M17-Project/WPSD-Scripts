@@ -81,20 +81,21 @@ isDVmegaCast() { #obvs
 
 # connectivity check & version cacher
 conn_check() {
-    uAStr_chk="WPSD ConnectivityCheck & Version Cacher v2.2"
-    connection_established=false
+    #uAStr_chk="WPSD ConnectivityCheck & Version Cacher v2.2"
+    #connection_established=false
 
-    remote_version_url="${hostFileURL}/.WPSD_remote_version"
-    ini_file="/etc/.WPSD_remote_version"
-    temp_file="$(mktemp)"
+    #remote_version_url="${hostFileURL}/.WPSD_remote_version"
+    #ini_file="/etc/.WPSD_remote_version"
+    #temp_file="$(mktemp)"
 
-    if curl --silent --fail --output "$temp_file" -A "${uAStr_chk}" "$remote_version_url"; then
-        connection_established=true
-        mv "$temp_file" "$ini_file"
-        chmod 644 "$ini_file"
-    else
-        rm -f "$temp_file"
-    fi
+    #if curl --silent --fail --output "$temp_file" -A "${uAStr_chk}" "$remote_version_url"; then
+    #    connection_established=true
+    #    mv "$temp_file" "$ini_file"
+    #    chmod 644 "$ini_file"
+    #else
+    #    rm -f "$temp_file"
+    #fi
+    connection_established=true
 }
 
 # Function to check if any network interface has an IP address
