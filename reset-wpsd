@@ -15,7 +15,7 @@ wpsd-services fullstop
 cd /root
 
 rm -rf /usr/local/sbin
-GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD sbin reset (client-side)" git clone --depth 1 https://github.com/M17-Project/WPSD-Scripts.git /usr/local/sbin
+GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD sbin reset (client-side)" git clone -b M17 --depth 1 https://github.com/M17-Project/WPSD-Scripts.git /usr/local/sbin
 
 rm -rf /usr/local/bin
 GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD binary reset (client-side)" git clone --depth 1 https://github.com/M17-Project/WPSD-Binaries.git /usr/local/bin
@@ -27,7 +27,7 @@ else
 fi
 
 rm -rf /var/www/dashboard
-GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD webcode reset (client-side)" git clone --depth 1 https://github.com/M17-Project/WPSD-WebCode.git /var/www/dashboard
+GIT_HTTP_CONNECT_TIMEOUT="10" GIT_HTTP_USER_AGENT="WPSD webcode reset (client-side)" git clone -b M17 --depth 1 https://github.com/M17-Project/WPSD-WebCode.git /var/www/dashboard
 
 # dvmega cast-specific stuff
 castResult=$(isDVmegaCast)
