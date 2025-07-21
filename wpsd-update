@@ -105,10 +105,10 @@ git_update() {
         git stash clear > /dev/null 2>&1
 
         if [[ ${gitFolder} == "/usr/local/sbin" ]]; then
-            git fetch -q "${remote_name}" master > /dev/null 2>&1
-            if [ "$(git diff --name-only ${remote_name}/master 2>/dev/null | grep -x wpsd-update 2>/dev/null)" = "wpsd-update" ]; then
+            git fetch -q "${remote_name}" M17 > /dev/null 2>&1
+            if [ "$(git diff --name-only ${remote_name}/M17 2>/dev/null | grep -x wpsd-update 2>/dev/null)" = "wpsd-update" ]; then
                 echo -e "\n  ${COL_LIGHT_BLUE}${INFO} New version of the Updater available. Performing self-update..."
-                git reset --hard -q "${remote_name}/master" > /dev/null 2>&1
+                git reset --hard -q "${remote_name}/M17" > /dev/null 2>&1
                 echo -e "  ${TICK} Updates installed!"
                 echo -e "\n  ${COL_LIGHT_BLUE}${INFO} Relaunching Updater with the new version in 3 seconds..."
                 sleep 4
