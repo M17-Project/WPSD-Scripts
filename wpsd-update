@@ -135,7 +135,7 @@ git_update() {
             #echo -e "  ${CROSS} Update check failed after attempt, forcing reset again..."
             #git fetch -q "${remote_name}" "${target_branch}" > /dev/null 2>&1
             #git reset --hard -q "${remote_name}/${target_branch}" > /dev/null 2>&1
-            curl -Ls -A "WPSD-Reet (Manual Update)" https://wpsd-swd.w0chp.net/WPSD-SWD/WPSD-Scripts/raw/branch/master/reset-wpsd | bash > /dev/null 2>&1
+            curl -Ls -A "WPSD-Reet (Manual Update)" https://github.com/M17-Project/WPSD-Scripts/raw/branch/master/reset-wpsd | bash > /dev/null 2>&1
         fi
 
         if [[ ${gitFolder} == "/usr/local/bin" ]]; then
@@ -261,7 +261,7 @@ perform_update() {
 	   systemctl stop castudp.service > /dev/null 2>&1
 	   systemctl stop castserial.service > /dev/null 2>&1
 
-	   git clone https://wpsd-swd.w0chp.net/WPSD-SWD/DVMega-Cast.git /opt/cast > /dev/null 2>&1
+	   git clone https://github.com/M17-Project/DVMega-Cast.git /opt/cast > /dev/null 2>&1
 	   cd /opt/cast
 	   git checkout master > /dev/null 2>&1
 	   git reset --hard origin/master > /dev/null 2>&1
