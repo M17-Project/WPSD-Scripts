@@ -35,7 +35,7 @@ if $connection_established; then
     gitFolder="/var/www/dashboard"
     gitBranch="$( git --git-dir=${gitFolder}/.git symbolic-ref --short HEAD )"
     cd ${gitFolder}
-    git --work-tree=/var/www/dashboard --git-dir=/var/www/dashboard/.git pull origin ${gitBranch}
+    git --work-tree=/var/www/dashboard --git-dir=/var/www/dashboard/.git pull origin M17
 
     branch="master"
     git --work-tree=/usr/local/bin --git-dir=/usr/local/bin/.git pull origin "${branch}"

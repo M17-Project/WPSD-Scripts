@@ -97,7 +97,7 @@ git_update() {
         cd "${gitFolder}" || { echo "ERROR: Could not cd to ${gitFolder}"; return 1; }
         trap "cd '${current_dir}'" RETURN
 
-        local target_branch="master"
+        local target_branch="M17"
         if [[ ${gitFolder} == "/var/www/dashboard" ]]; then
             target_branch="${dash_branch}"
         fi
