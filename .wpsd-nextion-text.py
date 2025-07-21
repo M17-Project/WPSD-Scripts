@@ -61,7 +61,7 @@ def get_display_port():
 MODEM_BAUDRATE = 115200
 MMDVM_SERIAL = 0x80
 
-NEXTION_FIELDS = ["t0", "t1", "t2", "t5", "t20", "t30", "t31", "t32"] # <https://repo.w0chp.net/WPSD-Dev/WPSD_Nextion/src/branch/main/Nextion_Field_Use.md#nextion-display-fields>
+NEXTION_FIELDS = ["t0", "t1", "t2", "t5", "t20", "t30", "t31", "t32"] # <https://github.com/M17-Project/WPSD_Nextion/src/branch/main/Nextion_Field_Use.md#nextion-display-fields>
 
 def MakeNextionCommand(commandString: str):
     result = bytearray()
