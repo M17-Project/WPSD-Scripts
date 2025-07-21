@@ -134,9 +134,9 @@ if $connection_established; then
     gitBranch="$( git --git-dir=${gitFolder}/.git symbolic-ref --short HEAD )"
     cd ${gitFolder}
     git stash clear # housekeeping
-    git reset --hard origin/master
-    git --work-tree=/var/www/dashboard --git-dir=/var/www/dashboard/.git pull origin ${gitBranch}
-    git reset --hard origin/master
+    git reset --hard origin/M17
+    git --work-tree=/var/www/dashboard --git-dir=/var/www/dashboard/.git pull origin M17
+    git reset --hard origin/M17
     git stash clear # housekeeping
 
     echo -e "\nUpdating binaries..."
