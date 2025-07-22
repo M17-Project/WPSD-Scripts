@@ -67,6 +67,10 @@ for repo_key in "${!repos[@]}"; do
         fi
     fi
 done
+
+#TODO: Deactivated update notification until there is a proper solution in place
+html_output=false
+
 if [[ $html_output == true ]]; then
     echo "&nbsp;<a class=\"lookatme\" lookatme-text=\"Update available!\" href=\"/admin/update.php\">Update available!</a>"
 fi
