@@ -15,7 +15,7 @@ if [ "$DISPLAY_VALUE" == "Nextion" ] ; then # user has Nextion defined in mmdvmh
     # Check if the GroupsFileSrc and DMRidFileSrc exist in the INI file
     if ! grep -q "^GroupsFileSrc=" /etc/mmdvmhost; then
   	# Insert GroupsFileSrc in the NextionDriver section
-  	sed -i '/^\[NextionDriver\]$/a GroupsFileSrc=https://hostfiles.w0chp.net/groupsNextion.txt' /etc/mmdvmhost
+  	sed -i '/^\[NextionDriver\]$/a GroupsFileSrc=https://m17project.org/wpsd/groupsNextion.txt' /etc/mmdvmhost
     fi
     # Check if GroupsFile is set to groups.txt and change it to groupsNextion.txt
     if grep -q "^GroupsFile=groups.txt" /etc/mmdvmhost; then
