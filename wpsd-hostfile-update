@@ -67,7 +67,7 @@ echo "Downloading WPSD hostfiles archive..."
 curl --fail -L -o /usr/local/etc/tmp/wpsd-hostfiles.tar.bz2 -s ${hostFileURL}/wpsd-hostfiles.tar.bz2 --user-agent "${ProgVer}"
 
 echo "Downloading M17Hosts.txt"
-curl --fail -L -o /usr/local/etc/tmp/M17Hosts.txt -s https://hostfiles.refcheck.radio/M17Hosts.txt -A "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0"
+curl --fail -L -o /usr/local/etc/tmp/M17Hosts.txt -s https://hostfiles.refcheck.radio/M17Hosts.txt -A "WPSD-M17 Hostfile Updater"
 
 echo "Checking file integrities..."
 echo "Extracting hostfiles archive..."
